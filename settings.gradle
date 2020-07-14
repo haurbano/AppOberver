@@ -1,0 +1,3 @@
+include ':AppObserver'
+include ':app'
+rootProject.name = "AppLifeCycleListener"
