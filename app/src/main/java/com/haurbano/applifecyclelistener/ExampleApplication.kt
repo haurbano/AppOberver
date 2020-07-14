@@ -8,7 +8,7 @@ class ExampleApplication: Application() {
     private val appListener = AppObserver(this)
     override fun onCreate() {
         super.onCreate()
-        appListener.registerObserver {
+        appListener.addOnApplicationFinishedListener {
             Log.e("--haur","App finished")
         }
     }

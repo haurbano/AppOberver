@@ -1,6 +1,6 @@
 package com.haurbano.applistener
 
 interface AppEndObserver {
-   fun registerObserver(listener: OnAppEndsListener)
-   fun registerObserver(listener: () -> Unit)
+   fun addOnApplicationFinishedListener(listener: OnAppEndsListener)
+   fun addOnApplicationFinishedListener(listener: () -> Unit)
 }

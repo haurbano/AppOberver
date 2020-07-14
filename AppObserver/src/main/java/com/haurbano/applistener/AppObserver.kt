@@ -38,11 +38,11 @@ class AppObserver(app: Application): AppEndObserver {
         }
     }
 
-    override fun registerObserver(listener: OnAppEndsListener) {
+    override fun addOnApplicationFinishedListener(listener: OnAppEndsListener) {
         listeners.add(listener)
     }
 
-    override fun registerObserver(listener: () -> Unit) {
+    override fun addOnApplicationFinishedListener(listener: () -> Unit) {
         listeners.add(object : OnAppEndsListener {
             override fun appFinished() {
                 listener()
